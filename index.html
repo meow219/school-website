@@ -18,56 +18,36 @@
     
 
 
-    <!-- navbar -->
-    <nav class="w-screen bg-gray-500 h-fit overflow-hidden">
-        <div class="py-4 lg:px-8 px-4 max-w-[screen] h-16 m-auto text-white flex items-center justify-between">
-            <div class="flex items-center justify-start">
+    <nav class="w-screen bg-gray-500">
+        <div class="py-4 lg:px-8 px-4 max-w-full h-16 m-auto text-white flex items-center justify-between">
+            <div class="flex items-center">
                 <img src="/assests/emblem.png" alt="Logo" class="h-10 mr-1">
-                <h1 class="lg:text-2xl text-xl tracking-wider cursor-pointer">St.Thomas Vidyalayam Matriculation School
-                </h1>
+                <h1 class="lg:text-2xl text-xl tracking-wider cursor-pointer">St. Thomas Vidyalayam Matriculation School</h1>
             </div>
-            <div class="flex lg:gap-10 gap-6 uppercase tracking-wider cursor-pointer text-lg items-center"
-                id="navItems">
-                <span class="group relative inline-block">
-                    Violet Block
-                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full bg-gray-500 transition-all duration-500 opacity-0 group-hover:opacity-10 group-hover:scale-110">
-                    </div>
+            <div class="hidden lg:flex lg:gap-10 gap-6 uppercase tracking-wider cursor-pointer text-lg items-center" id="navItems">
+                <span class="group relative inline-block">Violet Block
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block">
-                    About us
-                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full bg-gray-500 transition-all duration-500 opacity-0 group-hover:opacity-10 group-hover:scale-110">
-                    </div>
+                <span class="group relative inline-block">About us
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block">
-                    Gallery
-                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full bg-gray-500 transition-all duration-500 opacity-0 group-hover:opacity-10 group-hover:scale-110">
-                    </div>
+                <span class="group relative inline-block">Gallery
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block">
-                    Contact
-                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full bg-gray-500 transition-all duration-500 opacity-0 group-hover:opacity-10 group-hover:scale-110">
-                    </div>
+                <span class="group relative inline-block">Contact
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
             </div>
-            <div id="hamburger" class="fa fa-bars flex items-center text-xl" style="display:none;"></div>
-            <div id="mobileNav"
-                class="fixed flex flex-col gap-8 pt-16 px-4 text-xl uppercase bg-gray-500 h-full inset-0 top-16 w-[70%] left-[-70%] ease-in-out duration-500 cursor-pointer">
-                <span>Violet Block</span>
-                <span>About</span>
-                <span>Gallery</span>
-                <span>Contact us</span>
+            <div id="hamburger" class="fa fa-bars flex items-center text-xl cursor-pointer lg:hidden" onclick="toggleMobileNav()"></div>
+            <div id="mobileNav" class="absolute left-[-70%] top-0 flex flex-col gap-8 pt-16 px-4 text-xl uppercase bg-gray-500 h-full w-[70%] transition-all duration-500 z-50">
+                <span onclick="toggleMobileNav()">Violet Block</span>
+                <span onclick="toggleMobileNav()">About</span>
+                <span onclick="toggleMobileNav()">Gallery</span>
+                <span onclick="toggleMobileNav()">Contact us</span>
             </div>
         </div>
     </nav>
-
+    
     <div class="w-full h-[42rem] relative">
         <video autoplay loop muted class="w-full h-full object-cover">
             <source src="/file_download.mp4" type="video/mp4">
@@ -81,9 +61,6 @@
             </div>
         </div>
     </div>
-    <!-- navbar -->
-
-
 
     <!-- layout scroll overbleed -->
     <style>
@@ -846,11 +823,10 @@
         var navItems = document.getElementById("navItems");
         var mobileNav = document.getElementById("mobileNav");
         var hamburger = document.getElementById("hamburger");
-
-
+    
         function adjustNavbar() {
-            screenWidth = parseInt(window.innerWidth);
-
+            var screenWidth = window.innerWidth;
+    
             if (screenWidth < 541) {
                 navItems.style.display = "none";
                 hamburger.style.display = "flex";
@@ -859,17 +835,25 @@
                 hamburger.style.display = "none";
             }
         }
-
-        adjustNavbar();
-
-        window.addEventListener("resize", adjustNavbar);
-
-        hamburger.addEventListener("click", function () {
-            mobileNav.classList.toggle("left-[-70%]");
-            hamburger.classList.toggle("fa-bars");
-            hamburger.classList.toggle("fa-close");
-        })
+    
+        adjustNavbar(); // Initial adjustment
+        window.addEventListener("resize", adjustNavbar); // Adjust on resize
+    
+        function toggleMobileNav() {
+            if (mobileNav.classList.contains("left-[-70%]")) {
+                mobileNav.classList.remove("left-[-70%]");
+                mobileNav.classList.add("left-0");
+                hamburger.classList.remove("fa-bars");
+                hamburger.classList.add("fa-times"); // Change to close icon
+            } else {
+                mobileNav.classList.remove("left-0");
+                mobileNav.classList.add("left-[-70%]");
+                hamburger.classList.remove("fa-times");
+                hamburger.classList.add("fa-bars"); // Change back to hamburger icon
+            }
+        }
     </script>
+    
 </body>
 
 </html>
