@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STVMHS</title>
+    <title>Document</title>
     <script src="/page 1/main page/js/cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/page 1/main page/styles/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/">
-    <link href="/page 2/Violet block/img/emblem.ico" rel="icon">
+    <link rel="stylesheet" href="/page 1/main page/styles/tailwind.css">
     <link rel="stylesheet"
-    
         href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 
@@ -30,13 +28,16 @@
                 <span class="group relative inline-block" onclick="location.href='/page 2/Violet block/index.html'">Violet Block
                     <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block"onclick="location.href='#about-us'">About us
+                <span class="group relative inline-block">About us
                     <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block"onclick="location.href='#gal'">Gallery
+                <span class="group relative inline-block">Gallery
                     <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
-                <span class="group relative inline-block"onclick="location.href='#gal'">Contact Us
+                <span class="group relative inline-block">Contact
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
+                </span>
+                <span class="group relative inline-block" onclick="location.href='/admin panal/public/admin.html'">Admin
                     <div class="w-0 group-hover:w-full h-0.5 bg-white transition-all duration-500"></div>
                 </span>
             </div>
@@ -147,18 +148,18 @@
 
     <!-- principle -->
     <div class="w-full bg-gray-800">
-        <section id="about-us" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
             <div class="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
                 <div class="w-full md:w-2/5 h-90">
                     <img class="object-center object-cover w-full h-full"
                         src="https://res.cloudinary.com/dze8favft/image/upload/v1731247995/school-website/Principal.jpg" alt="photo">
                 </div>
                 <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-                    <p class="text-xl text-white font-bold">Principal's Message</p>
+                    <p class="text-xl text-white font-bold">Principal</p>
                     <p class="text-base text-gray-400 font-normal"></p>
                     <p class="text-base leading-relaxed text-gray-500 font-normal">“The highest education is that which does not merely give us information but makes our life in harmony with existence.” – Rabindranath Tagore<br>
-                    It is no secret that we are at the forefront of one of the most exciting and promising moments in history. Explosion of information coupled with breathtaking advances in technology and Globalization of markets have thrown open opportunities for growth and prosperity.<br>
-                   -Dr.Amudha Saravanan
+                    It is no secret that we are at the forefront of one of the most exciting and promising moments in history. Explosion of information coupled with breathtaking advances in technology and Globalization of markets have thrown open opportunities for growth and prosperity.
+                   
                     <div class="flex justify-start space-x-2">
                     </div>
                 </div>
@@ -405,7 +406,100 @@
 
 
 
-    
+    <!-- student pass percentage -->
+
+    <div
+        class="relative flex h-3/4 items-center justify-center overflow-hidden bg-white border-t-4 border-b-4 border-[#000080] py-5">
+        <!-- Left Card -->
+        <div class="relative mx-auto">
+            <div class="group relative flex cursor-pointer after:shadow-lg after:shadow-black">
+                <!-- hidden slide -->
+                <div
+                    class="relative -left-16 top-0 z-10 w-96 rounded-xl bg-[#3d348b] px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14">
+                    <div class="flex flex-col gap-4">
+                        <!-- item 1 -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1 rounded-full bg-green-400/45 py-0.5 pl-1 pr-2">
+                                <p class="-rotate-90 leading-tight text-green-500">&rarr;</p>
+                                <p class="text-xs leading-tight text-white">10%</p>
+                            </div>
+                            <p class="text-white opacity-0 delay-200 duration-700 ease-in-out group-hover:opacity-100">
+                                1,300 Goals</p>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1 rounded-full bg-green-400/45 py-0.5 pl-1 pr-2">
+                                <p class="-rotate-90 leading-tight text-green-500">&rarr;</p>
+                                <p class="text-xs leading-tight text-white">30%</p>
+                            </div>
+                            <p class="text-white opacity-0 delay-200 duration-700 ease-in-out group-hover:opacity-100">
+                                30 Records</p>
+                        </div>
+                        <p>
+                            <a href=""
+                                class="text-sky-500 opacity-0 hover:text-sky-600">&rarr;</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- main -->
+                <div
+                    class="absolute -right-16 top-0 z-20 flex w-96 flex-col gap-4 self-end rounded-xl rounded-l-2xl border-none bg-[#7678ed] px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-right-14 group-hover:w-64 group-hover:rounded-l-lg">
+                    <p class="text-[#fff]">Achievements unlocked</p>
+                    <p class="text-[#fff]">Records sold</p>
+                    <p>
+                        <a href="" class="text-white/50">Learn more &rarr;</a>
+                    </p>
+                </div>
+                <div class="h-16 bg-[#3d348b] w-[28rem] -left-10 shadow-2xl shadow-[#3d348b] absolute bottom-0"></div>
+            </div>
+        </div>
+
+        <!-- Right Card -->
+        <div class="relative mx-auto ml-10">
+            <!-- Added a margin-left for spacing -->
+            <div class="group relative flex cursor-pointer after:shadow-lg after:shadow-black">
+                <!-- hidden slide -->
+                <div
+                    class="relative -left-16 top-0 z-10 w-96 rounded-xl bg-[#2a9d8f] px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14">
+                    <div class="flex flex-col gap-4">
+                        <!-- item 1 -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1 rounded-full bg-yellow-400/45 py-0.5 pl-1 pr-2">
+                                <p class="-rotate-90 leading-tight text-yellow-500">&rarr;</p>
+                                <p class="text-xs leading-tight text-white">50%</p>
+                            </div>
+                            <p class="text-white opacity-0 delay-200 duration-700 ease-in-out group-hover:opacity-100">
+                                5,000 Milestones</p>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1 rounded-full bg-yellow-400/45 py-0.5 pl-1 pr-2">
+                                <p class="-rotate-90 leading-tight text-yellow-500">&rarr;</p>
+                                <p class="text-xs leading-tight text-white">75%</p>
+                            </div>
+                            <p class="text-white opacity-0 delay-200 duration-700 ease-in-out group-hover:opacity-100">
+                                70 Tasks Completed</p>
+                        </div>
+                        <p>
+                            <a href="https://tailwindcss.com/docs"
+                                class="text-sky-500 opacity-0 hover:text-sky-600">&rarr;</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- main -->
+                <div
+                    class="absolute -right-16 top-0 z-20 flex w-96 flex-col gap-4 self-end rounded-xl rounded-l-2xl border-none bg-[#264653] px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-right-14 group-hover:w-64 group-hover:rounded-l-lg">
+                    <p class="text-[#fff]">Goals achieved</p>
+                    <p class="text-[#fff]">Tasks completed</p>
+                    <p>
+                        <a href="https://tailwindcss.com/docs" class="text-white/50">Learn more &rarr;</a>
+                    </p>
+                </div>
+                <div class="h-16 bg-[#2a9d8f] w-[28rem] -left-10 shadow-2xl shadow-[#2a9d8f] absolute bottom-0"></div>
+            </div>
+        </div>
+    </div>
+    <!-- student pass percentage -->
 
 
 
@@ -421,7 +515,8 @@
                 Executive Team</h1>
 
             <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error
+                alias, adipisci rem similique, at omnis eligendi optio eos harum.
             </p>
 
             <div>
@@ -444,7 +539,7 @@
                                             </div>
                                             <div style="background-color: Gray; width:70%;"
                                                 class="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
-                                                <h1 class="text-lg font-bold text-white ">Mr.Christob Rajus</h1>
+                                                <h1 class="text-lg font-bold text-white ">Juliet Smith</h1>
                                                 <h2 class="text-m font-light text-gray-200 ">Chairman</h2>
                                             </div>
 
@@ -475,7 +570,7 @@
                                             </div>
                                             <div style="background-color: Gray; width:70%;"
                                                 class="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
-                                                <h1 class="text-lg font-bold text-white ">Mrs.Shanthi Christob</h1>
+                                                <h1 class="text-lg font-bold text-white ">Andrew Davis</h1>
                                                 <h2 class="text-m font-light text-gray-200 ">Senior Principal</h2>
                                             </div>
 
@@ -506,7 +601,7 @@
                                             </div>
                                             <div style="background-color: Gray; width:70%;"
                                                 class="p-3 rounded-xl opacity-60 absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100">
-                                                <h1 class="text-lg font-bold text-white ">Mr.Robert</h1>
+                                                <h1 class="text-lg font-bold text-white ">Juliet Smith</h1>
                                                 <h2 class="text-m font-light text-gray-200 ">Correspondent</h2>
                                             </div>
 
@@ -530,80 +625,93 @@
     </section>
     <!-- team section ends -->
 
-
     <!-- component -->
-    <section id="gal" class="py-10 bg-w sm:py-16 lg:py-24 z-40 relative">
-            <div class="gallery">
-                <img src="/page 1/main page/assests/Extra Curricular Activities/1.Yoga.JPG" alt="a forest after an apocalypse">
-                <img src="/page 1/main page/assests/Extra Curricular Activities/2.Karate.jpg" alt="a waterfall and many rocks">
-                <img src="/page 1/main page/assests/Extra Curricular Activities/3.Bharadham.JPG" alt="a house on a mountain">
-                <img src="/page 1/main page/assests/Extra Curricular Activities/4.Silambam.JPG" alt="sime pink flowers">
-                <img src="/page 1/main page/assests/Guests of honour/1 (2).JPG" alt="big rocks with some trees">
-                <img src="/page 1/main page/assests/Guests of honour/1 (3).jpg" alt="a waterfall, a lot of tree and a great view from the sky">
-                <img src="/page 1/main page/assests/Guests of honour/1.JPG" alt="a cool landscape">
-                <img src="/page 1/main page/assests/Guests of honour/2 (2).JPG" alt="inside a town between two big buildings">
-                <img src="/page 1/main page/assests/Guests of honour/2 (3).jpg" alt="a great view of the sea above the mountain">
-                <img src="/page 1/main page/assests/Guests of honour/2.JPG" alt="big rocks with some trees">
-                <img src="/page 1/main page/assests/Guests of honour/3 (2).JPG" alt="a waterfall, a lot of tree and a great view from the sky">
-                <img src="/page 1/main page/assests/Guests of honour/3 (3).jpg" alt="a cool landscape">
-                <img src="/page 1/main page/assests/Guests of honour/3.JPG" alt="inside a town between two big buildings">
-                <img src="/page 1/main page/assests/Guests of honour/4 (2).JPG" alt="a great view of the sea above the mountain">
-                <img src="/page 1/main page/assests/Guests of honour/4.JPG" alt="a great view of the sea above the mountain">
-                
-              </div>
-        <style>
-           .gallery {
-          --s: 150px; /* control the size */
-          --g: 2px;  /* control the gap */
-          --f: 1.5;   /* control the scale factor */
-        
-          display: grid;
-          gap: var(--g);
-          width: calc(3*var(--s) + 2*var(--g));
-          aspect-ratio: 1;
-          grid-template-columns: repeat(3, auto);
-       
-          
-          position: absolute; /* This makes it possible to move the gallery container */
-          top: 30px; /* Adjust this value to move it down or up */
-          right: 500px; /* Adjust this value to move it to the right */
-        
-        }
-        .gallery > img {
-          width: 0;
-          height: 0;
-          min-height: 100%;
-          min-width: 100%;
-          object-fit: cover;
-          cursor: pointer;
-          filter: grayscale(80%);
-          transition: .5s linear;
-        }
-        
-        .gallery img:hover {
-          filter: grayscale(0);
-          
-          width: calc(var(--s) * var(--f));
-          height: calc(var(--s) * var(--f));
-        }
-        
-        body{
-          margin: 0;
-          min-height: 100vh;
-          display: grid;
-          place-content: center;
-          position: relative; /* Ensure the body is relative to place the gallery in position */
-        }
-        
-        </style>
-        </section>
+    <!-- component -->
+    <section class="py-10 bg-w sm:py-16 lg:py-24 z-40 relative">
 
 
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-light   text-black sm:text-4xl lg:text-5xl">
+                Our <span
+                    class="block w-full font-light text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-500 lg:inline"> Extracurriculars
+                </span>
+            </h2>
+            <p class="mb-20 text-lg text-gray-900">
+            
+            </p>
 
-    
-      
-<section>
-<!-- component -->
+            <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+                <a href="#" class=" shadow-2xl relative ">
+                    <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                        <div
+                            class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                            <div class="w-full h-full   p-5   relative">
+                                <div
+                                    class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                    <h2 class="text-2xl font-bold  text-white mb-0 pb-1">SILAMBAM</h2>
+                                    <p class="text-lg font-light text-white"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://res.cloudinary.com/dze8favft/image/upload/v1731248652/school-website/4.Silambam_qo7abx.jpg"
+                            class="w-full z-0  h-full    object-fill example ">
+                    </div>
+                </a>
+                <a href="#" class=" shadow-2xl relative ">
+                    <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                        <div
+                            class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                            <div class="w-full h-full   p-5   relative">
+                                <div
+                                    class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                    <h2 class="text-2xl font-bold  text-white mb-0 pb-1">KARATE</h2>
+                                    <p class="text-lg font-light text-white"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://res.cloudinary.com/dze8favft/image/upload/v1731248682/school-website/2.Karate_esig7m.jpg"
+                            class="w-full z-0  h-full    object-fill example ">
+                    </div>
+                </a>
+                <a href="#" class=" shadow-2xl relative ">
+                    <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                        <div
+                            class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                            <div class="w-full h-full   p-5   relative">
+                                <div
+                                    class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                    <h2 class="text-2xl font-bold  text-white mb-0 pb-1">CLASSICAL DANCE</h2>
+                                    <p class="text-lg font-light text-white"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://res.cloudinary.com/dze8favft/image/upload/v1731248501/school-website/3.Bharadham_wbe10q.jpg"
+                            class="w-full z-0  h-full    object-fill example ">
+                    </div>
+                </a>
+                <a href="#" class=" shadow-2xl relative ">
+                    <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                        <div
+                            class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                            <div class="w-full h-full   p-5   relative">
+                                <div
+                                    class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                    <h2 class="text-2xl font-bold  text-white mb-0 pb-1">YOGA</h2>
+                                    <p class="text-lg font-light text-white"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://res.cloudinary.com/dze8favft/image/upload/v1731248501/school-website/1.Yoga_zfzui8.jpg"
+                            class="w-full z-0  h-full    object-fill example ">
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- footer -->
     <footer class="relative bg-blueGray-200 pt-8 pb-6">
         <div class="container mx-auto px-4">
@@ -630,114 +738,73 @@
                         </button>
                     </div>
                 </div>
-                
-<!-- footer -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful
+                                Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free
+                                        Products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other
+                                Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT
+                                        License</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-blueGray-300">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-blueGray-500 font-semibold py-1">
+                        Copyright © <span id="get-current-year">2024</span><a
+                            href="nama website link"
+                            class="text-blueGray-500 hover:text-gray-800" target="_blank"> Website By
+                            <a href="nama website link"
+                                class="text-blueGray-500 hover:text-blueGray-800">VV-CREATOR</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- Chat container (hidden by default) -->
-<div class="hidden fixed bottom-5 right-5 w-80 md:w-96 lg:w-1/3 xl:w-1/4 flex flex-col bg-blue-50 rounded-lg shadow-xl overflow-hidden z-50" id="chatContainer">
-    <!-- Close button -->
-    <button class="text-blue-500 font-bold text-2xl p-2 self-end" id="closeBtn">&times;</button>
-
-    <!-- Predefined Queries -->
-    <div class="flex flex-col p-4 space-y-3">
-        <button class="bg-blue-300 text-white rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-900 text-left focus:outline-none" onclick="addPredefinedMessage('What are your hours of operation?')">What are your hours of operation?</button>
-        <button class="bg-blue-300 text-white rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-900 text-left focus:outline-none" onclick="addPredefinedMessage('How can I contact support?')">How can I contact support?</button>
-        <button class="bg-blue-300 text-white rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-900 text-left focus:outline-none" onclick="addPredefinedMessage('What services do you offer?')">What services do you offer?</button>
-        <button class="bg-blue-300 text-white rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-900 text-left focus:outline-none" onclick="addPredefinedMessage('How to apply online?')">How to apply online?</button>
-    </div>
-
-    <!-- Chatbox -->
-    <div class="flex flex-col p-4 border-t border-b border-gray-300 overflow-y-auto h-60 md:h-72 lg:h-80" id="chatBox">
-        <div class="space-y-3" id="messages"></div>
-    </div>
-
-    <!-- User Input -->
-    <div class="flex items-center p-4">
-        <input type="text" id="userInput" class="w-full p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask a question..." />
-        <button id="sendBtn" class="bg-blue-500 text-white p-3 rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Send</button>
-    </div>
-</div>
-
-<!-- Chat Icon -->
-<button class="fixed bottom-5 right-5 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 z-50" id="chatIcon">
-    <i class="fas fa-comments"></i>
-</button>
-
-<script>
-    // Toggle chat container visibility
-    document.getElementById("chatIcon").addEventListener("click", toggleChatContainer);
-    document.getElementById("closeBtn").addEventListener("click", toggleChatContainer);
-
-    // Show/Hide the chat container
-    function toggleChatContainer() {
-        const chatContainer = document.getElementById('chatContainer');
-        chatContainer.classList.toggle('hidden');
-    }
-
-    // Add predefined message to the chat
-    function addPredefinedMessage(message) {
-        const messages = document.getElementById("messages");
-        const userMessage = document.createElement("div");
-        userMessage.classList.add("bg-blue-200", "text-blue-900", "rounded-lg", "px-4", "py-2", "self-end", "max-w-xs", "break-words");
-        userMessage.textContent = message;
-        messages.appendChild(userMessage);
-
-        // Add bot response based on the predefined message clicked
-        const botMessage = document.createElement("div");
-        botMessage.classList.add("bg-gray-200", "text-gray-900", "rounded-lg", "px-4", "py-2", "self-start", "max-w-xs", "break-words");
-
-        if (message === "What are your hours of operation?") {
-            botMessage.textContent = "Our office hours are Monday through Friday from 9:00 AM to 5:00 PM. We are closed on weekends and public holidays. If you need assistance outside of these hours, please leave us a message, and we’ll get back to you as soon as possible.";
-        } else if (message === "How can I contact support?") {
-            botMessage.textContent = "You can contact our support team through the following methods:\n- Email: support@schoolwebsite.com\n- Phone: +1 (123) 456-7890 (available from 9:00 AM to 5:00 PM, Monday to Friday)\n- Live Chat: You can also chat with us directly here if you need immediate assistance!";
-        } else if (message === "What services do you offer?") {
-            botMessage.textContent = "We offer a variety of services to support students, parents, and faculty, including:\n- Admissions: Information and assistance with the application process.\n- Course Enrollment: Assistance with registering for classes.\n- Counseling Services: Support for academic, career, and personal guidance.\n- Financial Aid: Information on scholarships, grants, and other funding options.\n- Extracurricular Activities: Information on clubs, sports, and community involvement.";
-        } else if (message === "How to apply online?") {
-            botMessage.textContent = "To apply online, please follow these steps:\n1. Visit our Admissions page on the website.\n2. Click on the 'Apply Now' button to create an account or log in.\n3. Fill in the required personal and academic details.\n4. Upload necessary documents (transcripts, ID, etc.).\n5. Submit the application and pay any application fees.\nIf you need help with the process, feel free to contact our admissions office, and we'll guide you through it!";
-        }
-
-        messages.appendChild(botMessage);
-        messages.scrollTop = messages.scrollHeight;
-    }
-
-    // Send user input message
-    document.getElementById("sendBtn").addEventListener("click", sendMessage);
-    document.getElementById("userInput").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            sendMessage();
-        }
-    });
-
-    function sendMessage() {
-        const userInput = document.getElementById("userInput");
-        const messages = document.getElementById("messages");
-
-        if (userInput.value.trim() !== "") {
-            // Add user message to chat
-            const userMessage = document.createElement("div");
-            userMessage.classList.add("bg-blue-200", "text-blue-900", "rounded-lg", "px-4", "py-2", "self-end", "max-w-xs", "break-words");
-            userMessage.textContent = userInput.value;
-            messages.appendChild(userMessage);
-
-            // Clear input field after sending message
-            userInput.value = "";
-
-            // Add bot message (dummy response for now)
-            const botMessage = document.createElement("div");
-            botMessage.classList.add("bg-gray-200", "text-gray-900", "rounded-lg", "px-4", "py-2", "self-start", "max-w-xs", "break-words");
-            botMessage.textContent = "Thank you for your question! We will get back to you soon.";
-            messages.appendChild(botMessage);
-
-            messages.scrollTop = messages.scrollHeight;
-        }
-    }
-</script>
-                  
-
-
-<script>
-// Reuse other functions (e.g., `sendMessage`, `appendMessage`, `simulateTyping`) from your original code here.
-
+    <script>
         var navItems = document.getElementById("navItems");
         var mobileNav = document.getElementById("mobileNav");
         var hamburger = document.getElementById("hamburger");

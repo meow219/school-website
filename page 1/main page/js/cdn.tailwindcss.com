@@ -1,5 +1,4 @@
 ( () => {
-    
     var wb = Object.create;
     var li = Object.defineProperty;
     var bb = Object.getOwnPropertyDescriptor;
