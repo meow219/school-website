@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button id="chatIcon" class="chat-icon">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    
+    <div class="chat-container"> <button class="close-btn" id="close-btn">&times;</button>
+        <div class="predefined-queries">
+           
+          
+            <button class="query-btn">What are your hours of operation?</button>
+            <button class="query-btn">How can I contact support?</button>
+            <button class="query-btn">What services do you offer?</button>
+            <button class="query-btn">How to apply online?</button>
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="messages" id="messages"></div>
+        </div>
+        <input type="text" id="userInput" placeholder="Ask a question..." />
+        <button id="sendBtn">Send</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<script>
+ const responses = {
+    "Hi": "Hello there!",
+    "What are your hours of operation?": "We are open from 7 AM to 5 PM, Monday to Saturday.",
+   
+    "How can I contact support?": "You can contact support at support@sthmhs.in.",
+    "How to apply online?": "http://onlineapplication.com",
+    
+    "default": "Sorry, I don't understand that."
+};
+
+const closeBtn = document.getElementById('close-btn');
+
+
+document.getElementById("sendBtn").addEventListener("click", sendMessage);
+document.getElementById("userInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+const queryButtons = document.querySelectorAll('.query-btn');
+queryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const userMessage = button.textContent;
+        sendPredefinedMessage(userMessage);
+    });
+});
+
+document.getElementById("chatIcon").addEventListener("click", toggleChatContainer);
+
+function toggleChatContainer() {
+    const chatContainer = document.querySelector('.chat-container');
+    chatContainer.classList.toggle('visible');
+
+    if (chatContainer.classList.contains('visible')) {
+        chatContainer.style.display = 'block';
+        setTimeout(() => {
+            chatContainer.style.maxHeight = '500px'; // Allow height transition
+        }, 10);
+    } else {
+        chatContainer.style.maxHeight = '0';
+        setTimeout(() => {
+            chatContainer.style.display = 'none'; // Hide after transition
+        }, 300); // Match this duration to the CSS transition duration
+    }
+}
+
+function sendMessage() {
+    const userInput = document.getElementById("userInput");
+    const userMessage = userInput.value.trim();
+
+    if (userMessage) {
+        appendMessage(userMessage, "user");
+        userInput.value = ""; // Clear input
+        const botResponse = getBotResponse(userMessage);
+        simulateTyping(botResponse, 50);
+    }
+}
+
+function sendPredefinedMessage(message) {
+    appendMessage(message, "user");
+    const botResponse = getBotResponse(message);
+    simulateTyping(botResponse, 50);
+}
+
+function getBotResponse(query) {
+    return responses[query] || responses["default"];
+}
+
+function appendMessage(message, sender) {
+    const messagesContainer = document.getElementById("messages");
+    const messageDiv = document.createElement("div");
+    messageDiv.textContent = message;
+    messageDiv.className = sender === "user" ? "user-message" : "bot-message";
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
+}
+
+function simulateTyping(message, delay) {
+    const messagesContainer = document.getElementById("messages");
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "bot-message typing";
+    typingDiv.textContent = "..."; // Indicate typing
+    messagesContainer.appendChild(typingDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
+
+    let index = 0;
+    const typingInterval = setInterval(() => {
+        if (index < message.length) {
+            typingDiv.textContent = message.slice(0, index + 1); // Typing effect
+            index++;
+        } else {
+            clearInterval(typingInterval);
+            messagesContainer.removeChild(typingDiv); // Remove typing indicator
+            appendMessage(message, "bot"); // Append the full message
+        }
+    }, delay);
+}
+
+
+</script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+ display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 90vh;
+    background-color: #f0f0f0;
+}
+
+.chat-container {
+    display:flex;
+    width: 300px;
+    flex-direction: column;
+    background: rgb(196, 240, 241);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+ 
+}
+
+.predefined-queries {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.query-btn {
+    margin: 5px 0;
+    padding: 10px;
+    border:black;
+    border-color: black;
+    background-color: #70dddb;
+    border: black;
+    border-radius: 10%;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+}
+
+.query-btn:hover {
+    background-color: #ffffff; /* Darker shade on hover */
+    color: black;
+}
+.close-btn
+.chat-box {
+    padding: 10px;
+    height: 100px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message, .bot-message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #d1f5d1;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #2fc8d3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.typing {
+    opacity: 0.7;
+    color: #888; /* Grey color for typing indicator */
+    font-style: italic;
+}
+
+
+.chat-container.visible {
+    display: block; /* Show when toggled */
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2fc8d3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.chat-icon:hover {
+    background-color: white
+}
+
+.predefined-queries {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+
+
+
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.predefined-queries {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.query-btn {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+  
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+}
+
+.query-btn:hover {
+    background-color: #ffffff; /* Darker shade on hover */
+    color: black;
+}
+
+/* Other styles remain unchanged */
+
+/* Other styles remain unchanged */
+
+</style>
